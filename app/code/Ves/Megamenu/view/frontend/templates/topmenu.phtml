@@ -115,7 +115,7 @@ $class .= ' ' . $menu->getData("classes");
 						});
 						<?php } ?>	
 						jQuery('#<?php echo $alias ?>-menu .ves-megamenu .level0').hover(function() {
-							var mParentTop = $('#<?php echo $blockId ?> .navigation').offset().top;
+							var mParentTop = jQuery(this).parents('.ves-megamenu').offset().top;
 							var mParentHeight = $(this).parent().height();
 							var mTop =  $(this).height();
 							var mHeight = $(this).height();

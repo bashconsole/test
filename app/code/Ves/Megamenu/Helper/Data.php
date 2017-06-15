@@ -228,6 +228,15 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 		}elseif($item['link_type'] == 'category_link'){
 			if ($category = $this->getCategory($item['category'])) {
 				$href = $category['url'];
+				if($urls = parse_url($href)){
+					$url_host = $urls['host'];
+					$base_url = $this->_storeManager->getStore()->getBaseUrl();
+					if($base_urls = parse_url($base_url)) {
+						if($url_host != $base_urls['host']){
+							$href = str_replace($url_host, $base_urls['host'], $href);
+						}
+					}
+				}
 			}
 		}
 
@@ -324,6 +333,15 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 		}elseif($item['link_type'] == 'category_link'){
 			if ($category = $this->getCategory($item['category'])) {
 				$href = $category['url'];
+				if($urls = parse_url($href)){
+					$url_host = $urls['host'];
+					$base_url = $this->_storeManager->getStore()->getBaseUrl();
+					if($base_urls = parse_url($base_url)) {
+						if($url_host != $base_urls['host']){
+							$href = str_replace($url_host, $base_urls['host'], $href);
+						}
+					}
+				}
 			}
 		}
 

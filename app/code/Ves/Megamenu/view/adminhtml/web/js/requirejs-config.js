@@ -7,7 +7,9 @@ var config = {
 		"*": {
 			"nestable": "Ves_Megamenu/js/jquery.nestable",
 			"vesknockoutjs": "Ves_Megamenu/js/vesknockoutjs",
-			"vesbrowser": "Ves_Megamenu/js/vesbrowser"
+			"vesbrowser": "Ves_Megamenu/js/vesbrowser",
+			"mage/backend/bootstrap": "Ves_Megamenu/js/bootstrap",
+			"Magento_Ui/js/lib/knockout/bootstrap": "Ves_Megamenu/js/bootstrap"
 		}
 	},
 	"deps": [
